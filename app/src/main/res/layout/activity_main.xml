@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <Button
+       android:layout_width="match_parent"
+       android:layout_height="50dp"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       android:text="determenstic"
+       android:id="@+id/deter"
+       android:layout_margin="20dp"
+       android:padding="15dp"
+       ></Button>
+   <Button
+       android:layout_width="match_parent"
+       android:layout_height="50dp"
+       app:layout_constraintTop_toBottomOf="@+id/deter"
+       app:layout_constraintStart_toStartOf="parent"
+       android:text="M / M / 1"
+       android:id="@+id/M_M_1"
+       android:layout_margin="20dp"
+       android:padding="15dp"
+       ></Button>
+   <Button
+       android:layout_width="match_parent"
+       android:layout_height="50dp"
+       app:layout_constraintTop_toBottomOf="@+id/M_M_1"
+       app:layout_constraintStart_toStartOf="parent"
+       android:text="M / M / 1 / K"
+       android:id="@+id/M_M_1_k"
+       android:layout_margin="20dp"
+       android:padding="15dp"
+       ></Button>
+   <Button
+       android:layout_width="match_parent"
+       android:layout_height="50dp"
+       app:layout_constraintTop_toBottomOf="@+id/M_M_1_k"
+       app:layout_constraintStart_toStartOf="parent"
+       android:text="M / M / C"
+       android:id="@+id/M_M_C"
+       android:layout_margin="20dp"
+       android:padding="15dp"
+       ></Button>
+   <Button
+       android:layout_width="match_parent"
+       android:layout_height="50dp"
+       app:layout_constraintTop_toBottomOf="@+id/M_M_C"
+       app:layout_constraintStart_toStartOf="parent"
+       android:text="M / M / C / k"
+       android:id="@+id/M_M_C_k"
+       android:layout_margin="20dp"
+       android:padding="15dp"
+       ></Button>
+
+   <TextView
+       android:id="@+id/sign"
+       android:layout_width="300dp"
+       android:layout_height="50dp"
+       android:layout_margin="20dp"
+       android:gravity="center"
+       android:padding="10dp"
+       android:text="تصميم : م.محمود أسامة"
+       android:textSize="20dp"
+       android:textStyle="italic"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.495"
+       app:layout_constraintStart_toStartOf="parent"
+
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintVertical_bias="0.88" />
+</android.support.constraint.ConstraintLayout>
