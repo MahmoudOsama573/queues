@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Mahmoud/AndroidStudioProjects/final/app/src/main/res/layout/activity_det_with_k.xml" value="0.13" />
+        <entry key="..\:/Users/Mahmoud/AndroidStudioProjects/final/app/src/main/res/layout/activity_det_without_k.xml" value="0.12" />
+        <entry key="..\:/Users/Mahmoud/AndroidStudioProjects/final/app/src/main/res/layout/activity_deter.xml" value="0.18" />
+        <entry key="..\:/Users/Mahmoud/AndroidStudioProjects/final/app/src/main/res/layout/activity_main.xml" value="0.12228260869565218" />
+        <entry key="..\:/Users/Mahmoud/AndroidStudioProjects/final/app/src/main/res/layout/activity_mm1.xml" value="0.12894736842105264" />
+        <entry key="..\:/Users/Mahmoud/AndroidStudioProjects/final/app/src/main/res/layout/activity_mm1_k.xml" value="0.12894736842105264" />
+        <entry key="..\:/Users/Mahmoud/AndroidStudioProjects/final/app/src/main/res/layout/activity_mm_c.xml" value="0.12894736842105264" />
+        <entry key="..\:/Users/Mahmoud/AndroidStudioProjects/final/app/src/main/res/layout/activity_mm_ck.xml" value="0.12894736842105264" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
