@@ -67,17 +67,17 @@ public class detWithoutK extends AppCompatActivity {
                  n.setText(no+"");
                  int u=(int) (1/ar);
                  GraphView graph =  findViewById(R.id.graph);
-                 DataPoint[] dataPoints = new DataPoint[(t+2)*2];
+                 DataPoint[] dataPoints = new DataPoint[44];
                  int j=0;
 
 
-                 for(int i=0;i<t+2;i++) {
+                 for(int i=0;i<22;i++) {
                      if (i<u) {
                          dataPoints[j++] = new DataPoint(i, 0);
 
-                     dataPoints[j++] = new DataPoint(i + .9, 0);
+                     dataPoints[j++] = new DataPoint(i + .9999999, 0);
                  }else{   dataPoints[j++] = new DataPoint(i, getn(sr,ar,i));
-                         dataPoints[j++] = new DataPoint(i + .9, getn(sr,ar,i));}
+                         dataPoints[j++] = new DataPoint(i + .9999999, getn(sr,ar,i));}
                  }
                  LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(dataPoints);
                  graph.addSeries(series);
@@ -87,31 +87,37 @@ public class detWithoutK extends AppCompatActivity {
                  else if(c.getText().toString().contains(".")==true){    Toast.makeText(getBaseContext(),
                          "costomers no cant bee a fractional number",Toast.LENGTH_LONG).show();}
                  else if(m.getText().toString().contains(".")==true){    Toast.makeText(getBaseContext(),
-                         "m cant bee a fractional number",Toast.LENGTH_LONG).show();}
+                         "m cant be a fractional number",Toast.LENGTH_LONG).show();}
                  else{
                  int mm=Integer.parseInt(m.getText().toString());
                  int nw=Integer.parseInt(c.getText().toString());
+                 if(getti(sr,ar,mm)==-1){
+                     Toast.makeText(getBaseContext(),
+                             "wrong inputs",Toast.LENGTH_LONG).show();
+                 }else{
 wq.setText(getwq(sr,ar,mm,nw)+"");
-if(getn2(sr,ar,t,mm)<0)n.setText("1 or 0");
+if(getn2(sr,ar,t,mm)<=0)n.setText("1 or 0");
 else n.setText(getn2(sr,ar,t,mm)+"");
                  GraphView graph =  findViewById(R.id.graph);
                  int ti=getti(sr,ar,mm);
-                 DataPoint[] dataPoints = new DataPoint[(ti+2)*2];
+                 DataPoint[] dataPoints = new DataPoint[40];
                  int j=0;
 
 
-                 for(int i=0;i<ti+2;i++) {
+                 for(int i=0;i<20;i++) {
                      if (i>ti) {
                          dataPoints[j++] = new DataPoint(i, 0);
 
-                         dataPoints[j++] = new DataPoint(i + .9, 0);
-                     }else{   dataPoints[j++] = new DataPoint(i, getn2(sr,ar,i,mm));
+                         dataPoints[j++] = new DataPoint(i + .9999999, 0);
+                     }else{
 
-                         dataPoints[j++] = new DataPoint(i + .9, getn2(sr,ar,i,mm));}
+                         dataPoints[j++] = new DataPoint(i, getn2(sr,ar,i,mm));
+
+                         dataPoints[j++] = new DataPoint(i + .9999999, getn2(sr,ar,i,mm));}
                  }
                  LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(dataPoints);
                  graph.addSeries(series);
-             }
+             }}
          }}
          }catch(Exception e){
                  Toast.makeText(getBaseContext(),e.toString(),Toast.LENGTH_LONG).show();}
@@ -134,7 +140,7 @@ else n.setText(getn2(sr,ar,t,mm)+"");
         if (i>0){
  return i;
         }
-        else return -1;
+        else return 0;
     }
     public   int getwq(double sr,double ar,int m,int n) {
         if (n == 0) {
@@ -149,7 +155,7 @@ else n.setText(getn2(sr,ar,t,mm)+"");
         }else {return 0;}
     }
  public   int getti(double sr,double ar,int m){
-        for(int i=0;i>=0;i++){
+        for(int i=0;i<100000;i++){
 
             int i1=(int)(ar*i);
             int i2=(int)(sr*i);

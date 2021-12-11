@@ -131,12 +131,14 @@ if(c.getText().toString().length()==0){Toast.makeText(getBaseContext(),
         double p =ar/sr;
         return(Math.pow(p, n)*(1-p));
     }
-    static int factorial(int n)
+    int factorial(int n)
     {
-        if (n == 0)
-            return 1;
+        int sum=1;
+        for(int i=n;i>0;i--){
+            sum=sum*i;
 
-        return n*factorial(n-1);
+        }
+        return sum;
     }
     public double conv(double d){
         d=d*100;

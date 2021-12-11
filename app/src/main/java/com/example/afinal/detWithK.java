@@ -65,15 +65,15 @@ if(w==-1){
                     if (i<u) {
                         dataPoints[j++] = new DataPoint(i, 0);
 
-                        dataPoints[j++] = new DataPoint(i + .9, 0);
+                        dataPoints[j++] = new DataPoint(i + .99999, 0);
                     }else if(i>=ti){
                         dataPoints[j++] = new DataPoint(i, k-1);
 
-                        dataPoints[j++] = new DataPoint(i + .9, k-1);
+                        dataPoints[j++] = new DataPoint(i + .99999, k-1);
                     }
                     else{   dataPoints[j++] = new DataPoint(i, getn(sr,ar,ti,i));
 
-                        dataPoints[j++] = new DataPoint(i + .9, getn(sr,ar,ti,i));}
+                        dataPoints[j++] = new DataPoint(i + .999, getn(sr,ar,ti,i));}
                 }
                 LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(dataPoints);
                 graph.addSeries(series);

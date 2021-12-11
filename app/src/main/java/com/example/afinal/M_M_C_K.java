@@ -164,10 +164,12 @@ public class M_M_C_K extends AppCompatActivity {
 
     int factorial(int n)
     {
-        if (n == 0)
-            return 1;
+        int sum=1;
+     for(int i=n;i>0;i--){
+         sum=sum*i;
 
-        return n*factorial(n-1);
+     }
+     return sum;
     }
     public double conv(double d){
         d=d*100;

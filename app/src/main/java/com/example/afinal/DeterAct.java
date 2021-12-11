@@ -106,14 +106,20 @@ startActivity(detWithout);
 else if(k.getText().toString().contains(".")==true){    Toast.makeText(getBaseContext(),
         "k cant be a fractional number",Toast.LENGTH_LONG).show();}
     else{
+
     if(srr>=arr){  detWithout.putExtra("case1",false);
     detWithout.putExtra("sr",srr);
     detWithout.putExtra("ar",arr);
     startActivity(detWithout);}else{
+        if(getti(srr,arr,Integer.parseInt(k.getText().toString()))==-1){
+            Toast.makeText(getBaseContext(),
+                    "wrong inputs",Toast.LENGTH_LONG).show();
+        }
+        else{
     detwithK.putExtra("sr",srr);
     detwithK.putExtra("ar",arr);
     detwithK.putExtra("k",Integer.parseInt(k.getText().toString()));
-    startActivity(detwithK);
+    startActivity(detwithK);}
 } }  }
            }   }catch(Exception e){
                     Toast.makeText(getBaseContext(),
@@ -121,6 +127,16 @@ else if(k.getText().toString().contains(".")==true){    Toast.makeText(getBaseCo
                 }}
         });
     }
+    public  int getti(double sr,double ar,int k){
+        for(int i=0;i<100000;i++){
+
+            int i1=(int)(ar*i);
+            int i2=(int)(sr*i-sr/ar);
+            if(k==(i1-i2))return i;
+        }
+        return -1;
+    }
+
     public void closeKeyboard(){
         View view=this.getCurrentFocus();
         if(view!=null){
